@@ -1,0 +1,94 @@
+{% extends 'artg/base.html' %}
+
+{% load static %}
+
+
+
+
+
+{% block content %}
+
+
+<style>
+
+    h1 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        margin-top: 50px;
+        font-style: italic;
+    }
+
+    p {
+        font-family: sans-serif;
+        margin-top: 30px;
+        font-size: 20px;
+        font-style: italic;
+    }
+
+    .btn {
+        background-color: rgb(22, 123, 170);
+        color: white;
+        font-weight: bold;
+    }
+
+    .card {
+        margin: 40px;
+        position: relative;
+        top: 25px;
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding-bottom: 25px;
+    }
+
+    .cardrow {
+        opacity: 1.0;
+    }
+
+    #cimage {
+        opacity: 1.0;
+    }
+    
+</style>
+
+<div class="container container-fluid">
+
+
+    <div class="row cardrow justify-content-center">
+
+        <div class="col-md-3 card card-artists">
+        <img class="card-image-top rounded-top" id="cimage" src="{% static 'images/artistcard.jpg' %}">
+        <hr>
+        <div class="card-body rounded-bottom">
+            <h3 class="card-title">Artists</h3>
+            <p class="card-text">The Artists i take inspiration from etc.</p>
+            <a href="{% url 'artist' %}" class="btn">Artists</a>
+        </div>
+        </div>
+
+
+
+        <div class="col-md-3 card card-resources">
+        <img class="card-image-top rounded-top" id="cimage" src="{% static 'images/cardim.png' %}">
+        <hr>
+        <div class="card-body rounded-bottom">
+            <h3 class="card-title">Resources</h3>
+            <p class="card-text">Resources i think are good and how i used them!</p>
+            <a href="{% url 'rsc' %}" class="btn">Resources</a>
+        </div>
+        </div>
+
+        <div class="col-md-3 card card-about">
+        <img class="card-image-top rounded-top" id="cimage" src="{% static 'images/about.jpg' %}">
+        <hr>
+        <div class="card-body rounded-bottom">
+            <h3 class="card-title">About</h3>
+            <p class="card-text">What is this site about?</p>
+            <a href="{% url 'about' %}" class="btn">???</a>
+        </div>
+        </div>
+
+    </div>
+
+
+</div>
+{% endblock %}

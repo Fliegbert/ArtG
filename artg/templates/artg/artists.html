@@ -1,0 +1,44 @@
+{% extends 'artg/base.html' %}
+
+{% load static %}
+<style>
+
+.content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.media-body {
+    margin-left: 20px;
+}
+
+</style>
+
+
+{% block content %}
+    {% for artist in artists %}
+
+<main role="main" class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <article class="media content-section">
+                <img class="article-image" src="{{artist.image.url}}">
+                <div class="media-body">
+                    <div class="article-metadata">
+                        <a class="mr-2">{{ artist.artist }}</a>
+                    <h2><a class="article-title" href="{{ artist.get_absolute_url }}">{{ artist.artist }}</a></h2>
+                    <p class="article-content">{{ artist.style }}</p>
+                    <hr>
+                    <p class="article-content">{{ artist.description }}</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</main>
+
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends 'artg/base.html' %}
+
+{% load static %}
+
+
+
+{% block content %}
+
+<style>
+    .rrow {
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border: 3px solid rgb(79, 162, 211);
+        height: fit-content;
+        width: fit-content;
+    }
+
+    li {
+        display: block;
+    }
+
+    ul {
+        float: left;
+    }
+</style>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <h1>Resources</h1>
+        <div class="accordion" id="accordionSection">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseVideos">Videos</button></h2>
+                <div class="accordion-collapse collapse" id="collapseVideos" data-bs-parent="#accordionSection"> 
+                    <div class="accordion-body">
+                        <a href="https://www.youtube.com/watch?v=RkNeZDRuqWs">Plague of Gripes's: How to Draw</a>
+                        <p>Starting motivation</p>
+                    </div>
+                </div>                
+            </div>
+        </div>
+        
+        <div class="accordion" id="accordionSection">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseChannels">Channels</button></h2>
+                <div class="accordion-collapse collapse" id="collapseChannels" data-bs-parent="#accordionSection"> 
+                    <div class="accordion-body">
+                        <a href="https://www.youtube.com/user/AndrewTischlerArt">Andrew Tischler</a>
+                        <p>Oil Painting</p>
+                        <a href="https://www.youtube.com/channel/UC5_awWGxcl0jQmVWfd_kJLQ">Florent Farges</a>
+                        <p>Oil Painting</p>
+                        <a href="https://www.youtube.com/user/InPursuitOfArt1">Volen CK</a>
+                        <p>Great Videos about the importance of mindset</p>
+                        <a href="https://www.youtube.com/channel/UCN8V_pO0xOFKLL4XG1tshnw">Perspective</a>
+                        <p>Art History and Epochs</p>
+                    </div>
+                </div>                
+            </div>
+        </div>
+
+        <div class="accordion" id="accordionSection">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseWebsites">Websites</button></h2>
+                <div class="accordion-collapse collapse" id="collapseWebsites" data-bs-parent="#accordionSection"> 
+                    <div class="accordion-body">
+                        <a href="https://drawabox.com/">Drawabox</a>
+                        <p>Great beginner source</p>
+                        <a href="https://www.pinterest.com/">Pinterest</a>
+                        <p>Good for References</p>
+                    </div>
+                </div>                
+            </div>
+        </div>
+
+        <div class="accordion" id="accordionSection">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseCommunities">Art Communities</button></h2>
+                <div class="accordion-collapse collapse" id="collapseCommunities" data-bs-parent="#accordionSection"> 
+                    <div class="accordion-body">
+                        <a href="https://www.artstation.com/?sort_by=community">Artstation</a>
+                        <p></p>
+                        <a href="https://www.deviantart.com/">Deviant Art</a>
+                        <p></p>
+                    </div>
+                </div>                
+            </div>
+        </div>
+
+    </div>   
+</div>
+
+{% endblock %}
