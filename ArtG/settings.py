@@ -9,9 +9,9 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-from importlib import django_heroku
+
 from pathlib import Path
-from importlib import cloudinary_storage
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-am45ki%5=j^k372&5=hi!v=wsr1yuk=jx@#=q3b!ce003em2t!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['artstruck.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -38,12 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cloudinary_storage',
     'artg',
     'user',
     'crispy_forms',
-    'cloudinary',
-    'django-heroku',
 ]
 
 MIDDLEWARE = [
@@ -143,13 +140,3 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'artg-home'
 LOGIN_URL = 'login'
-
-django_heroku.settings(locals())
-
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'fliegbert',
-    'API_KEY': '961778569392133',
-    'API_SECRET': 'I2tE0UYKmiFkq7ZSa9Mk7pjnWDI'
-}
-
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
